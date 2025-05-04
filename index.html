@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    
+    <!--====== Title ======-->
+    <title>Jam Group 8</title>
+    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+        
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+
+<body>
+    <body>
+        <button id="toggle-dark-mode" class="btn btn-secondary btn-sm"
+                style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+            🌙
+        </button>
+    
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+    
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+    
+    <!--====== HEADER PART START ======-->
+
+    <header class="header-area">
+
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+              <source src="assets/videos/background.mp4" type="video/mp4">
+              Tarayıcınız video oynatmayı desteklemiyor.
+            </video>
+
+           
+              
+            <div class="video-overlay">
+              <!-- Buraya istersen yazı veya buton ekleyebilirsin -->
+              <h1>Greenwash’a Hoş Geldiniz </h1>
+              <a href="#app" class="main-btn">Hemen Başla</a>
+            </div>
+          </div>
+          
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/greenwash-logo.png" alt="greenwash-logo" class="logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li><a href="#" rel="nofollow" class="main-btn start-btn fadeInLeftBig">Hemen Başla</a></li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+                        </nav>
+
+
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+
+        <div id="home" class="header-hero bg_cover d-lg-flex align-items-center">
+            <!--
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+            -->
+            
+            <div class="container" id="main">
+                <div class="row align-items-center justify-content-center justify-content-lg-between">
+                    <div class="col-lg-6 col-md-10">
+                        <div class="header-hero-content">
+                            <h3 class="header-title fadeInLeftBig"><span>Greenwash</span> Nedir? </h3>
+                            <p class="text fadeInLeftBig">Greenwash, bir markanın veya şirketin çevreye duyarlıymış gibi görünmek için gerçekte olduğundan daha “yeşil” ve sürdürülebilir bir imaj yaratmasıdır. Amaç, çevreye duyarlı tüketicilerin dikkatini çekmek ve güvenini kazanmaktır.
+
+                                Gerçek çevre dostu yaklaşımlar, yalnızca sözde değil, eylemde de sürdürülebilirlik gerektirir.</p>
+                            <ul class="d-flex">
+                                <li><a href="#" rel="nofollow" class="main-btn start-btn fadeInLeftBig">Hemen Başla</a></li>
+                            </ul>
+                        </div> <!-- header hero content -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-10">
+                        <div class="header-image">
+                            <img src="assets/images/header-app.png" alt="app" class="image fadeInRightBig">
+
+                        </div> <!-- header image -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+
+<!-- App Page -->
+<div class="container" id="app" style="display: none;">
+<div id="initial-buttons">
+    <button id="take-photo" class="btn btn-success m-2">📸 Fotoğraf Çek</button>
+    <button id="upload-photo" class="btn btn-primary m-2">📂 Fotoğraf Yükle</button>
+    
+    </div>
+
+    <!-- Kamera Görünümü -->
+    <div id="camera-view" style="display: none;">
+        
+        
+      <video id="video" autoplay playsinline></video>
+      <button id="capture" class="btn btn-success m-2">📸 Çek</button>
+      <button id="cancel-camera" class="btn btn-danger m-2">❌ İptal</button>
+      
+    </div>
+
+    <!-- Ön İzleme Alanı -->
+<div id="preview-section" style="display: none; text-align: center; margin-top: 20px;">
+    <!--<h2>Fotoğraf Önizleme</h2>-->
+    <img id="preview-image" src="" alt="Çekilen Fotoğraf" style="max-width: 100%; max-height: 300px; border-radius: 10px;">
+    <div style="margin-top: 10px;">
+        <button id="confirm-photo" class="btn btn-success m-2">✅ Onayla</button>
+        <button id="retake-photo" class="btn btn-warning m-2">🔄 Tekrar Çek</button>
+    </div>
+</div>
+
+
+    <!-- Fotoğraf Yükleme Alanı -->
+    <div id="upload-section" style="display: none;">
+        <label class="btn btn-primary m-2">
+            📂 Fotoğraf Yükle <input type="file" id="file-input" accept="image/*" hidden>
+          </label>
+        <button id="cancel-upload" class="btn btn-danger m-2">❌ İptal</button>
+        
+    </div>
+
+    <!-- Yükleme İlerlemesi -->
+    <div id="progress-container" style="display: none;">
+        <div class="progress m-2">
+            <div id="upload-progress" class="progress-bar progress-bar-striped progress-bar-animated"
+                 role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+              0%
+            </div>
+          </div>
+          
+    </div>
+
+    <!-- Sonuç Gösterimi -->
+    <div id="result-section" style="display: none;">
+      <h2>Sonuç</h2>
+      <img id="result-image" src="" alt="Yüklenen Fotoğraf">
+      <div id="result-data"></div>
+      <button id="new-photo" class="btn btn-warning m-2">🔄 Yeni Fotoğraf</button>
+
+    </div>
+
+</div>
+
+
+         </header>
+    <!--====== HEADER PART ENDS ======-->
+       
+
+
+
+    <!--====== FOOTER START ======-->
+    
+    <footer id="footer" class="footer-area">
+        
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright d-sm-flex justify-content-between">
+                            <div class="copyright-text text-center">
+                                <p class="text">Jam Group 8</p>
+                            </div> <!-- copyright text -->
+                            
+                            <div class="copyright-privacy text-center">
+                                <a href="#">Report Issues</a>
+                            </div> <!-- copyright privacy -->
+                        </div> <!-- copyright -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+        
+
+
+    <!--====== Jquery js ======-->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+    <!--====== Scrolling Nav js ======-->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+
+<script>
+ 
+</script>
+</body>
+
+</html>
