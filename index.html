@@ -29,10 +29,7 @@
 
 <body>
     <body>
-        <button id="toggle-dark-mode" class="btn btn-secondary btn-sm"
-                style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-            🌙
-        </button>
+        
     
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -74,7 +71,7 @@
             <div class="video-overlay">
               <!-- Buraya istersen yazı veya buton ekleyebilirsin -->
               <h1>Greenwash’a Hoş Geldiniz </h1>
-              <a href="#app" class="main-btn">Hemen Başla</a>
+              <a href="#app" rel="nofollow" class="main-btn start-btn fadeInLeftBig">Hemen Başla</a>
             </div>
           </div>
           
@@ -94,7 +91,7 @@
 
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
-                                    <li><a href="#" rel="nofollow" class="main-btn start-btn fadeInLeftBig">Hemen Başla</a></li>
+                                    <li><a rel="nofollow" class="main-btn start-btn fadeInLeftBig">Hemen Başla</a></li>
                                 </ul>
                             </div> <!-- navbar collapse -->
                         </nav> <!-- navbar -->
@@ -124,8 +121,18 @@
                             <p class="text fadeInLeftBig">Greenwash, bir markanın veya şirketin çevreye duyarlıymış gibi görünmek için gerçekte olduğundan daha “yeşil” ve sürdürülebilir bir imaj yaratmasıdır. Amaç, çevreye duyarlı tüketicilerin dikkatini çekmek ve güvenini kazanmaktır.
 
                                 Gerçek çevre dostu yaklaşımlar, yalnızca sözde değil, eylemde de sürdürülebilirlik gerektirir.</p>
+                                <section class="counters">
+                                    <div class="counter">
+                                      <h3 id="counter1">0</h3>
+                                      <p>Toplam İnceleme</p>
+                                    </div>
+                                    <div class="counter">
+                                      <h3 id="counter2">0</h3>
+                                      <p>Tespit Edilen Greenwash</p>
+                                    </div>
+                                  </section>
                             <ul class="d-flex">
-                                <li><a href="#" rel="nofollow" class="main-btn start-btn fadeInLeftBig">Hemen Başla</a></li>
+                                <li><a rel="nofollow" class="main-btn start-btn fadeInLeftBig">Hemen Başla</a></li>
                             </ul>
                         </div> <!-- header hero content -->
                     </div>
@@ -250,6 +257,30 @@
 <script>
  
 </script>
-</body>
+<script>
+    let count1 = 0;
+    let count2 = 0;
+    let target1 = 100;
+    let target2 = 45;
+    
+    let interval1 = setInterval(() => {
+      if (count1 < target1) {
+        count1++;
+        document.getElementById('counter1').innerText = count1;
+      } else {
+        clearInterval(interval1);
+      }
+    }, 30);
+    
+    let interval2 = setInterval(() => {
+      if (count2 < target2) {
+        count2++;
+        document.getElementById('counter2').innerText = count2;
+      } else {
+        clearInterval(interval2);
+      }
+    }, 50);
+    </script>
+    </body>
 
 </html>
